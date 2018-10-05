@@ -59,7 +59,7 @@ tell application "Contacts"
 		-- START -- Delete Facebook contact field for each person
 		
 		set SocialProfileList to (every social profile of thisPerson whose service name contains "Facebook")
-		if SocialProfileList ­ {} then
+		if SocialProfileList Â­ {} then
 			delete (url of every social profile of thisPerson)
 			delete (user name of social profile of thisPerson)
 			
@@ -77,7 +77,7 @@ tell application "Contacts"
 		-- START -- Delete "home pages" that look like fb://profile/12345
 		
 		set homePageList to (every url of thisPerson whose value contains "fb://")
-		if SocialProfileList ­ {} then
+		if homePageList Â­ {} then
 			delete (every url of thisPerson whose value contains "fb://")
 		end if
 		
